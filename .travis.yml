@@ -21,7 +21,7 @@ deploy:
   strategy: git
   edge: true
   cleanup: false
-  github-token: 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
+  github-token: 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
   local-dir: /book
   keep-history: false
   on:
