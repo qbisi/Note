@@ -1,0 +1,23 @@
+language: rust
+sudo: false
+
+cache:
+  - cargo
+
+rust:
+  - stable
+
+before_script:
+  - yay mdbook
+
+script:
+  - mdbook build /home/qbisi/Note && mdbook test /home/qbisi/Note
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: /home/qbisi/Note/book
+  keep-history: false
+  on:
+    branch: master
