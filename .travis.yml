@@ -7,17 +7,14 @@ cache:
 rust:
   - stable
 
-before_script:
-  - yay mdbook
-
 script:
-  - mdbook build /home/qbisi/Note && mdbook test /home/qbisi/Note
+  - mdbook build "C:\Users\qbisi\OneDrive\Desktop\Note" && mdbook test "C:\Users\qbisi\OneDrive\Desktop\Note"
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local-dir: /home/qbisi/Note/book
+  local-dir: C:\Users\qbisi\OneDrive\Desktop\Note\book
   keep-history: false
   on:
     branch: master
