@@ -21,7 +21,7 @@ deploy:
   strategy: git
   edge: true
   cleanup: false
-  local-dir: /book
+  local-dir: /home/travis/build/qbisi/Note/book
   keep-history: false
   on:
     branch: master
